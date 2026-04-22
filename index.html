@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Orlando VA – Pathway to Excellence Nurses Week 2026</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,sans-serif;background:#f5f5f5;min-height:100vh;padding:1rem}
+  #app{max-width:620px;margin:0 auto;padding-bottom:2rem}
+  .screen{display:none}.screen.active{display:block}
+  .card{background:#fff;border:0.5px solid #e0e0e0;border-radius:12px;padding:1.25rem;margin-bottom:14px}
+  .btn-primary{width:100%;padding:14px;background:#1D9E75;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;margin-bottom:10px;display:block;text-align:center;text-decoration:none}
+  .btn-primary:hover{background:#0F6E56}
+  .btn-ghost{width:100%;padding:13px;background:transparent;color:#555;border:0.5px solid #ddd;border-radius:8px;font-size:15px;cursor:pointer;display:block;margin-bottom:8px;text-align:center}
+  .btn-ghost:hover{background:#f5f5f5}
+  input{width:100%;padding:10px 12px;border-radius:8px;border:0.5px solid #ccc;font-size:15px;margin-bottom:10px;font-family:inherit}
+  input:focus{outline:2px solid #1D9E75;border-color:#1D9E75}
+  label{font-size:13px;color:#666;margin-bottom:4px;display:block}
+  .tag{display:inline-block;padding:3px 10px;border-radius:6px;font-size:12px;font-weight:500}
+  .dot{width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0}
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px}
+  .stat-box{background:#f5f5f5;border-radius:8px;padding:12px;text-align:center}
+  .stat-num{font-size:20px;font-weight:500}
+  .stat-lbl{font-size:12px;color:#888;margin-top:4px}
+  .progress-bar{height:6px;background:#f0f0f0;border-radius:3px;margin-bottom:14px;overflow:hidden}
+  .progress-fill{height:100%;background:#1D9E75;border-radius:3px;transition:width 0.4s}
+  .dots-row{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+  .answer-btn{display:block;width:100%;text-align:left;padding:12px 14px;margin-bottom:8px;border-radius:8px;border:0.5px solid #ddd;background:transparent;font-size:15px;cursor:pointer;line-height:1.4;color:#222;font-family:inherit}
+  .answer-btn:hover:not(:disabled){background:#f5f5f5}
+  .answer-btn.correct{background:#EAF3DE;border-color:#639922;color:#27500A}
+  .answer-btn.wrong{background:#FCEBEB;border-color:#A32D2D;color:#501313}
+  .answer-btn.faded{opacity:0.4}
+  .tip-box{background:#f8f8f8;border-left:3px solid #1D9E75;padding:10px 14px;border-radius:0 8px 8px 0;font-size:14px;color:#555;line-height:1.6;margin-top:4px}
+  .tip-box.wrong{border-left-color:#E24B4A}
+  .confirm-card{border:2px solid #1D9E75;border-radius:14px;padding:1.25rem;background:#fff;margin-bottom:14px}
+  .error-msg{font-size:13px;color:#A32D2D;margin-bottom:8px}
+  .center{text-align:center}
+  .big-icon{font-size:38px;margin-bottom:8px}
+  h1{font-size:22px;font-weight:500;margin-bottom:6px}
+  h2{font-size:20px;font-weight:500;margin-bottom:6px}
+  .subtitle{font-size:14px;color:#666;margin-bottom:10px}
+  .org-label{font-size:13px;font-weight:500;color:#0F6E56;letter-spacing:0.08em;margin-bottom:4px;text-transform:uppercase}
+  .badge{background:#E1F5EE;color:#0F6E56;padding:3px 14px;border-radius:6px;font-size:13px;font-weight:500;display:inline-block;margin-bottom:0}
+  .ms-form-btn{display:block;width:100%;padding:14px;background:#0078d4;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;margin-bottom:10px;text-align:center;text-decoration:none}
+  .ms-form-btn:hover{background:#006cbe}
+  .code-display{font-size:18px;font-weight:500;color:#222;letter-spacing:0.04em}
+  .fac-link{font-size:13px;color:#bbb;text-align:center;margin-top:8px;cursor:pointer;text-decoration:underline;display:block}
+</style>
+</head>
+<body>
+<div id="app">
+
+<!-- HOME -->
+<div id="home" class="screen active">
+  <div class="center" style="padding:1.5rem 0 1rem">
+    <div class="org-label">Orlando VA Healthcare System</div>
+    <h1>Pathway to Excellence</h1>
+    <p class="subtitle">Nurses Week Knowledge Challenge 2026</p>
+    <span class="badge">3 Random Questions · Raffle Entry</span>
+  </div>
+  <div class="card">
+    <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:14px">
+      As we celebrate <strong>Nurses Week 2026</strong>, Orlando VA is on a <strong>Journey to Pathway to Excellence 2027</strong>! Answer 3 randomly selected questions to discover how our programs already align with the 28 PTE survey domains — then enter the raffle!
+    </p>
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num">50+</div><div class="stat-lbl">Question pool</div></div>
+      <div class="stat-box"><div class="stat-num">3</div><div class="stat-lbl">Your questions</div></div>
+      <div class="stat-box"><div class="stat-num">Raffle</div><div class="stat-lbl">Entry prize</div></div>
+    </div>
+    <button class="btn-primary" onclick="startGame()">Start my quiz →</button>
+  </div>
+  <a class="fac-link" onclick="showFacLogin()">Facilitator access</a>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" class="screen">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+    <span id="q-tag" class="tag"></span>
+    <span id="q-counter" style="font-size:13px;color:#888"></span>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  <div class="dots-row" id="dots-row"></div>
+  <div class="card">
+    <p id="q-text" style="font-size:16px;font-weight:500;line-height:1.6;margin-bottom:14px;color:#222"></p>
+    <div id="answers"></div>
+    <div id="tip-box" class="tip-box" style="display:none"></div>
+  </div>
+  <button class="btn-primary" id="next-btn" style="display:none" onclick="nextQuestion()">Next →</button>
+</div>
+
+<!-- RAFFLE FORM -->
+<div id="raffle" class="screen">
+  <div class="center" style="padding:1.25rem 0 1rem">
+    <div class="big-icon">🎟</div>
+    <h2>You've earned a raffle entry!</h2>
+    <p class="subtitle" id="raffle-score-msg"></p>
+    <div class="dots-row" id="raffle-dots" style="justify-content:center"></div>
+  </div>
+  <div class="card">
+    <p style="font-size:14px;color:#555;line-height:1.6;margin-bottom:14px">Enter your details, then submit the Microsoft Form to be officially entered into the raffle!</p>
+    <label>Full name</label>
+    <input type="text" id="r-name" placeholder="e.g. Jamie Reyes" />
+    <label>VA email address</label>
+    <input type="email" id="r-email" placeholder="e.g. jamie.reyes@va.gov" />
+    <div id="form-err" class="error-msg" style="display:none"></div>
+    <button class="btn-primary" onclick="submitRaffle()">Generate my raffle code →</button>
+    <button class="btn-ghost" onclick="startGame()">Retake with new questions</button>
+  </div>
+</div>
+
+<!-- CONFIRMATION -->
+<div id="confirm" class="screen">
+  <div class="center" style="padding:1.25rem 0 0.75rem">
+    <div class="big-icon">🎉</div>
+    <h2>Almost there!</h2>
+    <p class="subtitle">Copy your raffle code below, then tap the button to submit the form.</p>
+  </div>
+  <div class="confirm-card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:12px;border-bottom:0.5px solid #eee">
+      <div>
+        <p style="font-size:12px;color:#aaa;margin-bottom:2px">Your raffle code</p>
+        <p class="code-display" id="conf-code"></p>
+      </div>
+      <div style="background:#E1F5EE;border-radius:8px;padding:8px 12px;text-align:center">
+        <div style="font-size:20px;font-weight:500;color:#0F6E56" id="conf-score"></div>
+        <div style="font-size:11px;color:#5DCAA5">score</div>
+      </div>
+    </div>
+    <div style="margin-bottom:10px"><p style="font-size:13px;color:#888;margin-bottom:2px">Name</p><p style="font-size:15px;font-weight:500;color:#222" id="conf-name"></p></div>
+    <div style="margin-bottom:14px"><p style="font-size:13px;color:#888;margin-bottom:2px">Email</p><p style="font-size:15px;color:#222" id="conf-email"></p></div>
+    <div style="background:#E1F5EE;border-radius:8px;padding:10px 12px;font-size:13px;color:#0F6E56;line-height:1.5;margin-bottom:14px">
+      📋 <strong>Step 1:</strong> Copy your raffle code above.<br>
+      📝 <strong>Step 2:</strong> Tap the button below to open the Microsoft Form and paste your code to complete your entry!
+    </div>
+    <a id="ms-form-link" class="ms-form-btn" target="_blank">Open Microsoft Form to complete entry →</a>
+    <button class="btn-ghost" onclick="startGame()">Let a colleague take their quiz</button>
+  </div>
+</div>
+
+<!-- FACILITATOR LOGIN -->
+<div id="faclogin" class="screen">
+  <div style="max-width:380px;margin:3rem auto 0">
+    <div class="card">
+      <h2 style="font-size:18px;margin-bottom:6px">Facilitator access</h2>
+      <p style="font-size:14px;color:#666;margin-bottom:16px;line-height:1.6">Enter the facilitator password to view the question bank.</p>
+      <label>Password</label>
+      <input type="password" id="fac-pw" placeholder="••••••••" onkeydown="if(event.key==='Enter')facLogin()" />
+      <div id="fac-err" class="error-msg" style="display:none"></div>
+      <button class="btn-primary" onclick="facLogin()">Sign in →</button>
+      <button class="btn-ghost" onclick="showScreen('home')">Back</button>
+    </div>
+  </div>
+</div>
+
+<!-- FACILITATOR QUESTION BANK -->
+<div id="fac" class="screen">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+    <div>
+      <h2 style="font-size:18px;margin-bottom:2px">Question Bank</h2>
+      <p style="font-size:13px;color:#888">Orlando VA · Nurses Week 2026</p>
+    </div>
+    <button class="btn-ghost" style="width:auto;padding:6px 14px;font-size:13px;margin:0" onclick="showScreen('home')">Exit</button>
+  </div>
+  <div id="cat-filters" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px"></div>
+  <div id="question-list"></div>
+</div>
+
+</div>
+
+<script>
+const FORM_URL = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Ixtf6a-r7kWCHberJRqzv0guq-pkkelNl65rUbA0UgVUNEUyWDVZVDhCMlROVUNGRVdDQTFCVUpUVi4u";
+const FAC_PASS = "PTE2026";
+
+const CAT_COLORS = {
+  "Shared Decision-Making":  {bg:"#E1F5EE",color:"#0F6E56"},
+  "Safety":                  {bg:"#FAECE7",color:"#993C1D"},
+  "Well-being":              {bg:"#E6F1FB",color:"#185FA5"},
+  "Recognition":             {bg:"#FBEAF0",color:"#993556"},
+  "Quality":                 {bg:"#EAF3DE",color:"#3B6D11"},
+  "Leadership":              {bg:"#EEEDFE",color:"#534AB7"},
+  "Professional Development":{bg:"#FAEEDA",color:"#854F0B"},
+};
+
+const ALL_QUESTIONS = [
+  {q:"Which Orlando VA council allows direct care nurses to lead and participate in nursing performance improvement initiatives?",a:["Nursing Performance Improvement Council","Nursing Informatics Council","APRN Council","Nursing Advocacy Council"],correct:0,cat:"Shared Decision-Making",tip:"The Nursing Performance Improvement Council is one of 9 shared governance councils at Orlando VA where direct care nurses shape nursing practice — a direct example of PTE shared decision-making."},
+  {q:"A bedside nurse wants to influence how technology is used in patient care documentation at Orlando VA. Which shared governance council should they join?",a:["Nursing Informatics Council","Nursing Clinical Practice Council","Nursing EBP & Research Council","APRN Council"],correct:0,cat:"Shared Decision-Making",tip:"The Nursing Informatics Council focuses on technology and informatics — giving direct care nurses a voice in how tools shape their practice."},
+  {q:"Which Orlando VA council best supports nurses who want to advocate for patient and nursing workforce concerns at the system level?",a:["Nursing Advocacy Council","Nursing Professional Development Council","Nursing Performance Improvement Council","WHEN Council"],correct:0,cat:"Shared Decision-Making",tip:"The Nursing Advocacy Council empowers nurses to advocate for Veterans and staff at the system level — a core PTE shared decision-making structure."},
+  {q:"What does the acronym WHEN stand for in Orlando VA's WHEN Council?",a:["Weekend, Holiday, Evening, Nights","Wellness, Health, Engagement, Nursing","Workforce Hours and Evening Needs","Weekend Hours and Evening Nurses"],correct:0,cat:"Shared Decision-Making",tip:"The WHEN Council — Weekend, Holiday, Evening, Nights — ensures that nurses on non-traditional shifts have a dedicated voice in Orlando VA's shared governance structure."},
+  {q:"A staff nurse wants to get involved in developing and reviewing clinical policies and procedures at Orlando VA. Which council should they join?",a:["Nursing Clinical Practice Council","Nursing Performance Improvement Council","Nursing EBP & Research Council","Nursing Informatics Council"],correct:0,cat:"Shared Decision-Making",tip:"The Nursing Clinical Practice Council is where nurses directly shape clinical standards and policies at Orlando VA."},
+  {q:"Which Orlando VA shared governance council specifically supports advanced practice registered nurses in having a voice in practice decisions?",a:["APRN Council","Nursing Advocacy Council","Nursing Professional Development Council","Nursing Performance Improvement Council"],correct:0,cat:"Shared Decision-Making",tip:"The APRN Council ensures advanced practice nurses have dedicated representation in Orlando VA's shared governance structure."},
+  {q:"How many shared governance councils currently operate at Orlando VA, giving direct care nurses a seat at the decision-making table?",a:["9 councils","6 councils","5 councils","12 councils"],correct:0,cat:"Shared Decision-Making",tip:"Orlando VA has 9 active shared governance councils — APRN Council, Nurse Advocacy Council, Nursing Professional Development Council, Nursing PI Council, Nursing Clinical Practice Council, Nursing EBP & Research Council, Nursing Informatics Council, WHEN Council, and Nurse Manager Council."},
+  {q:"Which Orlando VA shared governance council is specifically designed to represent nurses working weekends, holidays, evenings, and nights?",a:["WHEN Council","Nursing Advocacy Council","Nurse Manager Council","Nursing Professional Development Council"],correct:0,cat:"Shared Decision-Making",tip:"The WHEN Council ensures nurses on non-day shifts have equal representation in shared governance at Orlando VA — a powerful example of inclusive decision-making."},
+  {q:"Which Orlando VA shared governance council provides nurse managers with a dedicated forum for leadership collaboration and decision-making?",a:["Nurse Manager Council","APRN Council","Nursing Advocacy Council","Nursing Performance Improvement Council"],correct:0,cat:"Shared Decision-Making",tip:"The Nurse Manager Council gives nurse managers a shared governance structure to collaborate and align — reflecting PTE's expectation that leadership at all levels participates in governance."},
+  {q:"Which Orlando VA council supports nurses who want to engage in evidence-based practice and nursing research?",a:["Nursing EBP & Research Council","Nursing Performance Improvement Council","Nursing Clinical Practice Council","Nursing Informatics Council"],correct:0,cat:"Shared Decision-Making",tip:"The Nursing EBP & Research Council connects frontline nurses to evidence-based practice and research — aligning with PTE's commitment to quality and nurse empowerment."},
+  {q:"Participation in Orlando VA's shared governance councils is open to which group of nurses?",a:["Direct care nurses, APRNs, and nurse managers across all services","Nurse managers only","APRNs and charge nurses only","Nurses with 5 or more years of experience"],correct:0,cat:"Shared Decision-Making",tip:"Orlando VA's 9 shared governance councils are open to direct care nurses, APRNs, and nurse managers — ensuring every level of nursing has a seat at the table."},
+  {q:"A Unit Practice Council at Orlando VA identifies an issue they cannot resolve at the unit level. What mechanism allows them to escalate it to a shared governance council for assistance or direction?",a:["Item for Consideration link submission","JPSR report","Ask Your ADPCS on SharePoint","DBRS report"],correct:0,cat:"Shared Decision-Making",tip:"The Item for Consideration link allows UPCs and staff to formally escalate issues beyond the unit level to the appropriate shared governance council — ensuring no concern falls through the cracks."},
+  {q:"Which Orlando VA council focuses on supporting nurses' professional growth, education, and career development through shared governance?",a:["Nursing Professional Development Council","Nursing EBP & Research Council","WHEN Council","Nursing Advocacy Council"],correct:0,cat:"Shared Decision-Making",tip:"The Nursing Professional Development Council gives nurses a voice in shaping education, mentorship, and career development initiatives at Orlando VA."},
+  {q:"At Orlando VA, which system do nurses use to report patient-related safety events and near-misses?",a:["JPSR (Joint Patient Safety Reporting)","DBRS","PMDB","TMS"],correct:0,cat:"Safety",tip:"JPSR is Orlando VA's primary tool for reporting patient safety events. Timely, honest reporting supports a just culture and prevents future harm."},
+  {q:"A nurse witnesses a behavioral incident involving an agitated patient at Orlando VA. Which reporting system should they use?",a:["DBRS (Disruptive Behavior Reporting System)","JPSR","TMS","PI Dashboard"],correct:0,cat:"Safety",tip:"DBRS is used at Orlando VA specifically to document behavioral incidents — protecting both staff and patients through accurate reporting."},
+  {q:"What is the primary purpose of PMDB training offered to Orlando VA nursing staff?",a:["To equip staff with skills to safely manage disruptive or aggressive patient behavior","To train nurses in medication administration","To certify nurses in basic life support","To orient new nurses to the EHR"],correct:0,cat:"Safety",tip:"PMDB (Prevention and Management of Disruptive Behavior) prepares Orlando VA nurses to de-escalate and safely manage behavioral situations — a key safety competency."},
+  {q:"At Orlando VA, direct care nurses can lead and participate in which formal safety review process following a significant patient safety event?",a:["Root Cause Analysis (RCA)","PI Dashboard review","DBRS audit","Shark Tank submission"],correct:0,cat:"Safety",tip:"RCAs at Orlando VA can be led by frontline nurses — a powerful demonstration of direct care nurse ownership of patient safety culture."},
+  {q:"Orlando VA recognizes nurses who proactively identify and prevent potential safety events before they reach the patient. What is this award called?",a:["Great Catch Award","DAISY Award","BEe Award","Nursing Excellence Award"],correct:0,cat:"Safety",tip:"The Great Catch Award celebrates nurses who catch potential errors before they harm patients — reinforcing Orlando VA's proactive safety culture."},
+  {q:"Which of the following BEST describes Orlando VA's approach to safety reporting in alignment with PTE standards?",a:["A just culture where nurses report events without fear of punishment to improve patient safety","Safety events are reported only by nurse managers","Only serious events require formal reporting","Safety reporting is optional for near-misses"],correct:0,cat:"Safety",tip:"Orlando VA's just culture encourages all nurses to report near-misses and safety events openly — learning from them to protect Veterans."},
+  {q:"A nurse at Orlando VA notices a recurring medication workflow issue that could harm patients. What formal process can they lead to investigate and solve it?",a:["Root Cause Analysis (RCA)","PMDB training session","DBRS report","TMS course submission"],correct:0,cat:"Safety",tip:"RCAs go beyond reporting — they dig into root causes and drive systemic change. Direct care nurses at Orlando VA can lead this process."},
+  {q:"Orlando VA's patient safety area serves as a dedicated space for which purpose?",a:["Promoting safety awareness, reporting resources, and safety education for staff","Storing controlled substances securely","Conducting medication reconciliation","Documenting shift handoffs"],correct:0,cat:"Safety",tip:"The patient safety area at Orlando VA is a hub for safety culture — making resources, reporting tools, and awareness materials visible and accessible to all staff."},
+  {q:"A nurse at Orlando VA is experiencing compassion fatigue after a difficult patient loss. Which peer-based well-being program can provide immediate collegial support?",a:["RISE Program","PMDB","TMS","Explorer Program"],correct:0,cat:"Well-being",tip:"The RISE (Resilience in Stressful Events) Program offers peer support to Orlando VA nurses after distressing clinical events — a key PTE well-being resource."},
+  {q:"Which Orlando VA resource supports nurses who need spiritual care, emotional counseling, or support during moral distress?",a:["Chaplain Services","RISE Program","WHEN Council","Nursing Advocacy Council"],correct:0,cat:"Well-being",tip:"Chaplain Services at Orlando VA provide spiritual and emotional support to nurses and Veterans alike — an important component of holistic nurse well-being."},
+  {q:"The RISE Program at Orlando VA is designed to support nurses in which specific situation?",a:["After a stressful or traumatic clinical event","During annual performance reviews","When applying for nursing scholarships","When filing a JPSR report"],correct:0,cat:"Well-being",tip:"RISE (Resilience in Stressful Events) provides immediate peer support after difficult clinical experiences — reducing burnout and supporting psychological safety."},
+  {q:"Which of the following BEST reflects Orlando VA's commitment to nurse well-being as defined by PTE standards?",a:["Offering programs like RISE and Chaplain Services that support nurses physically, mentally, and emotionally","Providing annual wellness newsletters only","Requiring nurses to self-manage stress outside of work","Offering well-being resources to managers only"],correct:0,cat:"Well-being",tip:"PTE well-being standards require organizations to actively support nurses' physical, mental, and emotional health — Orlando VA does this through RISE and Chaplain Services."},
+  {q:"A nurse at Orlando VA feels overwhelmed and needs someone to talk to after a code blue. Which program connects them with a trained peer supporter?",a:["RISE Program","Chaplain Services","PMDB","Nursing Excellence Award nomination"],correct:0,cat:"Well-being",tip:"RISE peer supporters are trained Orlando VA nurses who provide confidential, collegial support after stressful events — you are not alone."},
+  {q:"The WHEN Council at Orlando VA is aligned with which PTE domains?",a:["Well-being and shared decision-making","Safety and quality","Recognition and leadership","Professional development only"],correct:0,cat:"Well-being",tip:"The WHEN Council (Weekend, Holiday, Evening, Nights) addresses scheduling fairness and nurse well-being for non-day shift nurses — bridging well-being and shared decision-making, two core PTE domains."},
+  {q:"Which award at Orlando VA specifically recognizes nurses who demonstrate extraordinary compassionate care, nominated by patients, families, or colleagues?",a:["DAISY Award","BEe Award","Nursing Excellence Award","Great Catch Award"],correct:0,cat:"Recognition",tip:"The DAISY Award is a nationally recognized honor celebrated at Orlando VA — honoring the extraordinary clinical skill and compassionate care nurses provide every day."},
+  {q:"Orlando VA recognizes the outstanding contributions of nursing assistants through which specific award?",a:["BEe Award","DAISY Award","Employee of the Month","Great Catch Award"],correct:0,cat:"Recognition",tip:"The BEe Award celebrates nursing assistants at Orlando VA — ensuring recognition spans all members of the nursing team, not just RNs."},
+  {q:"Which Orlando VA recognition program acknowledges exceptional employees across all roles on a monthly basis?",a:["Employee of the Month","DAISY Award","BEe Award","Nursing Excellence Award"],correct:0,cat:"Recognition",tip:"The Employee of the Month program recognizes outstanding performance across Orlando VA — any nurse or nursing support staff member can be nominated."},
+  {q:"A nurse manager wants to formally recognize a staff nurse for exemplifying nursing excellence at Orlando VA. Which award is most specifically designed for this?",a:["Nursing Excellence Award","BEe Award","Great Catch Award","Employee of the Month"],correct:0,cat:"Recognition",tip:"The Nursing Excellence Award at Orlando VA is specifically designed to honor nurses who exemplify the highest standards of nursing practice and professionalism."},
+  {q:"Which of the following BEST reflects how Orlando VA's recognition programs align with PTE standards?",a:["Recognition spans all nursing roles through multiple award programs","Only nurse managers receive formal recognition","Recognition is limited to annual performance reviews","Awards are given only based on patient satisfaction scores"],correct:0,cat:"Recognition",tip:"PTE requires that recognition be comprehensive and inclusive. Orlando VA's DAISY, BEe, Nursing Excellence, Great Catch, and Employee of the Month awards collectively honor all nursing roles."},
+  {q:"Who can nominate a nurse for the DAISY Award at Orlando VA?",a:["Patients, families, or colleagues","Only nurse managers","Only the Chief Nursing Officer","Only physicians"],correct:0,cat:"Recognition",tip:"The DAISY Award at Orlando VA can be nominated by anyone — patients, families, or fellow staff — making recognition truly inclusive and peer-driven."},
+  {q:"A nursing assistant at Orlando VA goes above and beyond to comfort a Veteran during a difficult procedure. Which award best recognizes their contribution?",a:["BEe Award","DAISY Award","Nursing Excellence Award","Great Catch Award"],correct:0,cat:"Recognition",tip:"The BEe Award was created specifically to recognize the exceptional contributions of nursing assistants at Orlando VA — every team member matters."},
+  {q:"Orlando VA offers Lean Six Sigma training to nursing staff. What is the primary goal of this methodology?",a:["To identify and eliminate waste while improving processes and patient outcomes","To train nurses in EHR documentation","To certify nurses in infection control","To provide leadership development for charge nurses"],correct:0,cat:"Quality",tip:"Lean Six Sigma equips Orlando VA nurses with structured tools to lead quality improvement — empowering frontline staff to drive meaningful change for Veterans."},
+  {q:"A staff nurse at Orlando VA has an innovative idea to improve Veteran care. Which platform allows them to pitch their idea directly to executive leadership?",a:["VA Shark Tank","Nursing PI SharePoint","JPSR","TMS"],correct:0,cat:"Quality",tip:"The VA Shark Tank at Orlando VA gives every staff member — including bedside nurses — the opportunity to pitch ideas to the Executive Leadership Team for implementation support."},
+  {q:"Where can Orlando VA nurses and managers access nursing-specific quality data and performance metrics to track improvement efforts?",a:["Nursing Performance Improvement Dashboard","DBRS","TMS","JPSR"],correct:0,cat:"Quality",tip:"The Nursing Performance Improvement Dashboard consolidates Orlando VA nursing quality data — giving nurses and managers real-time insight to drive improvement."},
+  {q:"Orlando VA nurse managers document their quality improvement action plans in which platform?",a:["Nursing PI SharePoint","JPSR","TMS","DBRS"],correct:0,cat:"Quality",tip:"The Nursing PI SharePoint keeps Orlando VA's quality improvement work organized, transparent, and accountable — a key infrastructure for sustained quality."},
+  {q:"Which of the following BEST demonstrates how Orlando VA empowers nurses to lead quality improvement?",a:["Staff nurses can lead PI projects, participate in shared governance QI councils, and submit ideas through the VA Shark Tank","Quality improvement is managed exclusively by quality management staff","Only APRNs and charge nurses lead PI projects","Quality data is accessible to managers only"],correct:0,cat:"Quality",tip:"Orlando VA's QI ecosystem — PI projects, councils, Shark Tank, and dashboards — reflects PTE's expectation that nurses at all levels actively participate in quality improvement."},
+  {q:"A direct care nurse at Orlando VA wants to lead a unit-based quality improvement project. Which shared governance structure supports this work?",a:["Unit Practice Councils and Nursing Performance Improvement Council","APRN Council only","JPSR reporting system","Employee of the Month committee"],correct:0,cat:"Quality",tip:"Unit Practice Councils and the Nursing Performance Improvement Council at Orlando VA are specifically designed to support frontline-led QI projects."},
+  {q:"The VA Shark Tank at Orlando VA reflects which PTE value?",a:["Nurses and staff are empowered to innovate and have their ideas heard by leadership","Only managers can submit improvement ideas","Innovation is limited to research departments","Ideas must go through multiple approval layers before reaching leadership"],correct:0,cat:"Quality",tip:"The VA Shark Tank embodies PTE's principle that every voice matters — any Orlando VA staff member can bring an idea directly to executive leadership."},
+  {q:"How do nurse leaders at Orlando VA demonstrate visibility and accessibility to frontline nursing staff on a regular basis?",a:["Through rounding on units and maintaining an open-door policy","Through annual town hall meetings only","Through written memos and policy updates","Through monthly email newsletters"],correct:0,cat:"Leadership",tip:"Rounding and open-door access at Orlando VA keep nurse leaders visible and connected to frontline staff — a core PTE leadership standard."},
+  {q:"Orlando VA nurses can submit anonymous questions directly to the CNO and ADPCS through which platform?",a:["Ask Your ADPCS section on SharePoint","JPSR reporting system","DBRS","TMS"],correct:0,cat:"Leadership",tip:"The Ask Your ADPCS SharePoint feature gives every Orlando VA nurse a safe, anonymous way to communicate directly with nursing executive leadership."},
+  {q:"Which Orlando VA leadership practice allows nurses to ask questions and receive updates specific to their service area such as acute care or primary care?",a:["Service-specific town halls","System-wide nursing town halls only","Anonymous SharePoint submissions only","Unit Practice Council meetings"],correct:0,cat:"Leadership",tip:"Service-specific town halls at Orlando VA — such as those for acute care and primary care — ensure leadership communication is relevant and tailored to each nursing area."},
+  {q:"Which of the following BEST describes how Orlando VA nurse leaders align with PTE leadership standards?",a:["Leaders are visible through rounding, open-door policies, town halls, and anonymous Q&A platforms","Leadership is accessible only during scheduled office hours","Town halls are held once a year for all nursing staff together","Nurse leaders communicate primarily through charge nurses"],correct:0,cat:"Leadership",tip:"Orlando VA's multi-channel leadership approach — rounding, open doors, town halls, and SharePoint Q&A — reflects PTE's expectation of visible, accessible, and responsive nurse leadership."},
+  {q:"A nurse at Orlando VA has a concern about a policy change but feels uncomfortable asking in a public setting. Which resource allows them to raise it anonymously to the CNO?",a:["Ask Your ADPCS on SharePoint","JPSR","RISE Program","DAISY nomination form"],correct:0,cat:"Leadership",tip:"The Ask Your ADPCS feature on SharePoint ensures every Orlando VA nurse has a confidential channel to reach nursing executive leadership — no concern goes unheard."},
+  {q:"Nursing town halls at Orlando VA serve which primary purpose in relation to PTE leadership standards?",a:["To keep nurses informed, allow open dialogue, and demonstrate leadership transparency","To conduct annual performance evaluations","To distribute recognition awards only","To review staffing schedules for the upcoming month"],correct:0,cat:"Leadership",tip:"Town halls at Orlando VA reflect PTE's expectation that nurse leaders communicate openly, listen actively, and keep staff engaged in the direction of the organization."},
+  {q:"Orlando VA supports nurses who want to pursue higher education through which financial benefit?",a:["Nursing scholarships","VA Shark Tank funding","Great Catch Award stipend","BEe Award grant"],correct:0,cat:"Professional Development",tip:"Nursing scholarships at Orlando VA help nurses advance their education — reflecting PTE's requirement that organizations actively invest in nurse professional growth."},
+  {q:"Which Orlando VA platform provides nurses with access to mandatory training, continuing education courses, and professional development modules?",a:["TMS (Talent Management System)","JPSR","DBRS","Nursing PI SharePoint"],correct:0,cat:"Professional Development",tip:"TMS is Orlando VA's learning management system — giving nurses access to a wide range of training and professional development resources."},
+  {q:"A nurse at Orlando VA wants to explore working in a different clinical area before committing to a transfer. Which program allows them to do this?",a:["Explorer Program","RISE Program","WHEN Council","Lean Six Sigma training"],correct:0,cat:"Professional Development",tip:"The Explorer Program at Orlando VA lets nurses observe and experience different clinical areas — supporting informed career development and reducing turnover."},
+  {q:"Orlando VA reimburses nurses for which professional milestone that demonstrates specialty expertise and commitment to excellence?",a:["Nursing specialty certifications","Graduate school tuition only","Conference registration only","PMDB completion"],correct:0,cat:"Professional Development",tip:"Certification reimbursement at Orlando VA removes financial barriers to specialty certification — supporting nurse expertise and aligning with PTE professional development standards."},
+  {q:"Which Orlando VA education program prepares nurses to effectively mentor and support newly hired nurses during onboarding?",a:["Preceptor Class","Charge Nurse Class","Explorer Program","EBP Class"],correct:0,cat:"Professional Development",tip:"The Preceptor Class equips Orlando VA nurses with the skills to mentor new colleagues — building a culture of support and professional growth from day one."},
+  {q:"A nurse at Orlando VA is interested in developing leadership skills to take on charge nurse responsibilities. Which program should they pursue?",a:["Charge Nurse Class","Preceptor Class","Explorer Program","RISE Program"],correct:0,cat:"Professional Development",tip:"The Charge Nurse Class at Orlando VA prepares nurses for leadership roles at the unit level — a direct investment in growing nursing leaders from within."},
+  {q:"Orlando VA's Nursing Education team offers EBP classes to nursing staff. What is the primary goal of these classes?",a:["To equip nurses with skills to apply research evidence to improve patient care","To train nurses on how to use TMS","To prepare nurses for the DAISY Award nomination process","To certify nurses in Lean Six Sigma"],correct:0,cat:"Professional Development",tip:"EBP classes at Orlando VA build nurses' capacity to find, evaluate, and apply research evidence — directly improving care quality for Veterans."},
+  {q:"Which of the following BEST reflects how Orlando VA's professional development offerings align with PTE standards?",a:["Orlando VA provides scholarships, TMS courses, EBP classes, preceptor and charge nurse training, the Explorer Program, and certification reimbursement","Professional development is self-funded and arranged individually by each nurse","Only nurses with 10 or more years of experience are eligible for development programs","Professional development opportunities are limited to APRNs"],correct:0,cat:"Professional Development",tip:"Orlando VA's comprehensive professional development ecosystem — spanning education, mentorship, exploration, and certification — reflects PTE's expectation that organizations actively champion nurse growth."},
+  {q:"The Explorer Program at Orlando VA most directly supports which PTE professional development principle?",a:["Nurses have opportunities to grow their careers and explore new areas of practice","Nurses must stay in their assigned unit for the first 5 years","Career development is the sole responsibility of the individual nurse","Only travel nurses are eligible for cross-training opportunities"],correct:0,cat:"Professional Development",tip:"The Explorer Program embodies PTE's belief that nurses should have real opportunities to develop, grow, and find their best fit within the organization."},
+];
+
+// ── STATE ──
+let shuffledQs=[], currentIdx=0, results=[], currentScore=0, answered=false;
+let raffleCode="", raffleName="", raffleEmail="", raffleScore="";
+let facQFilter="All";
+
+function shuffle(a){return [...a].sort(()=>Math.random()-0.5);}
+function genCode(name){
+  const ts=Date.now().toString(36).toUpperCase();
+  const ini=name.trim().split(" ").map(w=>w[0]?.toUpperCase()||"").join("").slice(0,3);
+  return "PTE-"+ini+Math.floor(Math.random()*900+100)+"-"+ts.slice(-4);
+}
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+function tagHTML(cat){
+  const c=CAT_COLORS[cat]||{bg:"#E1F5EE",color:"#0F6E56"};
+  return `<span class="tag" style="background:${c.bg};color:${c.color}">${cat}</span>`;
+}
+function dotHTML(state,label){
+  const bg=state==="correct"?"#1D9E75":state==="wrong"?"#E24B4A":state==="active"?"#E1F5EE":"#f0f0f0";
+  const color=state==="correct"||state==="wrong"?"#fff":state==="active"?"#0F6E56":"#aaa";
+  const border=state==="active"?"border:1px solid #1D9E75;":"";
+  return `<div class="dot" style="background:${bg};color:${color};${border}">${label}</div>`;
+}
+function renderDots(containerId){
+  const c=document.getElementById(containerId);
+  c.innerHTML=shuffledQs.map((_,i)=>{
+    const st=i<results.length?(results[i]?"correct":"wrong"):i===currentIdx?"active":"pending";
+    const lbl=i<results.length?(results[i]?"✓":"✗"):i+1;
+    return dotHTML(st,lbl);
+  }).join("");
+}
+
+// ── GAME ──
+function startGame(){
+  shuffledQs=shuffle(ALL_QUESTIONS).slice(0,3);
+  currentIdx=0; results=[]; currentScore=0; answered=false;
+  document.getElementById('r-name').value="";
+  document.getElementById('r-email').value="";
+  document.getElementById('form-err').style.display="none";
+  showScreen('quiz');
+  renderQuestion();
+}
+
+function renderQuestion(){
+  answered=false;
+  const q=shuffledQs[currentIdx];
+  const cc=CAT_COLORS[q.cat]||{bg:"#E1F5EE",color:"#0F6E56"};
+  document.getElementById('q-tag').textContent=q.cat;
+  document.getElementById('q-tag').style.background=cc.bg;
+  document.getElementById('q-tag').style.color=cc.color;
+  document.getElementById('q-counter').textContent=`Question ${currentIdx+1} of ${shuffledQs.length}`;
+  document.getElementById('progress-fill').style.width=`${(currentIdx/shuffledQs.length)*100}%`;
+  document.getElementById('q-text').textContent=q.q;
+  document.getElementById('tip-box').style.display="none";
+  document.getElementById('next-btn').style.display="none";
+  renderDots('dots-row');
+
+  const opts=shuffle(q.a.map((t,i)=>({t,orig:i})));
+  const ac=document.getElementById('answers');
+  ac.innerHTML="";
+  opts.forEach(opt=>{
+    const btn=document.createElement('button');
+    btn.className='answer-btn';
+    btn.textContent=opt.t;
+    btn.onclick=()=>pickAnswer(btn,opt,opts,q);
+    ac.appendChild(btn);
+  });
+}
+
+function pickAnswer(btn,opt,opts,q){
+  if(answered)return;
+  answered=true;
+  const ok=opt.orig===q.correct;
+  results.push(ok);
+  if(ok)currentScore++;
+
+  document.querySelectorAll('.answer-btn').forEach((b,i)=>{
+    b.disabled=true;
+    if(b===btn) b.classList.add(ok?"correct":"wrong");
+    if(opts[i].orig===q.correct&&b!==btn) b.classList.add("correct");
+    if(b!==btn&&opts[i].orig!==q.correct) b.classList.add("faded");
+  });
+
+  const tip=document.getElementById('tip-box');
+  tip.textContent=(ok?"Correct! ":"Not quite — ")+q.tip;
+  tip.className="tip-box"+(ok?"":" wrong");
+  tip.style.display="block";
+  const nBtn=document.getElementById('next-btn');
+  nBtn.textContent=currentIdx+1<shuffledQs.length?"Next question →":"Enter the raffle →";
+  nBtn.style.display="block";
+  renderDots('dots-row');
+}
+
+function nextQuestion(){
+  currentIdx++;
+  if(currentIdx>=shuffledQs.length){ showRaffle(); return; }
+  renderQuestion();
+}
+
+function showRaffle(){
+  document.getElementById('raffle-score-msg').textContent=`You scored ${currentScore} out of ${shuffledQs.length} — thank you for celebrating PTE with us!`;
+  const rd=document.getElementById('raffle-dots');
+  rd.innerHTML=results.map(r=>dotHTML(r?"correct":"wrong",r?"✓":"✗")).join("");
+  showScreen('raffle');
+}
+
+function submitRaffle(){
+  const name=document.getElementById('r-name').value.trim();
+  const email=document.getElementById('r-email').value.trim();
+  const errEl=document.getElementById('form-err');
+  if(!name){errEl.textContent="Please enter your name.";errEl.style.display="block";return;}
+  if(!email||!/\S+@\S+\.\S+/.test(email)){errEl.textContent="Please enter a valid email.";errEl.style.display="block";return;}
+  errEl.style.display="none";
+  raffleCode=genCode(name);
+  raffleName=name; raffleEmail=email;
+  raffleScore=`${currentScore}/${shuffledQs.length}`;
+  document.getElementById('conf-code').textContent=raffleCode;
+  document.getElementById('conf-name').textContent=raffleName;
+  document.getElementById('conf-email').textContent=raffleEmail;
+  document.getElementById('conf-score').textContent=raffleScore;
+  document.getElementById('ms-form-link').href=FORM_URL;
+  showScreen('confirm');
+}
+
+// ── FACILITATOR ──
+function showFacLogin(){ document.getElementById('fac-pw').value=""; document.getElementById('fac-err').style.display="none"; showScreen('faclogin'); }
+function facLogin(){
+  const pw=document.getElementById('fac-pw').value;
+  const errEl=document.getElementById('fac-err');
+  if(pw!==FAC_PASS){errEl.textContent="Incorrect password.";errEl.style.display="block";return;}
+  errEl.style.display="none";
+  renderFacDashboard();
+  showScreen('fac');
+}
+
+function renderFacDashboard(){
+  const cats=Object.keys(CAT_COLORS);
+  const filters=document.getElementById('cat-filters');
+  filters.innerHTML=`<button onclick="setQFilter('All')" id="filter-All" style="padding:4px 10px;border-radius:6px;border:1.5px solid #1D9E75;background:#E1F5EE;color:#0F6E56;font-size:12px;font-weight:500;cursor:pointer">All (${ALL_QUESTIONS.length})</button>`
+    +cats.map(cat=>{
+      const c=CAT_COLORS[cat];
+      const count=ALL_QUESTIONS.filter(q=>q.cat===cat).length;
+      return `<button onclick="setQFilter('${cat}')" id="filter-${cat.replace(/\s/g,'_')}" style="padding:4px 10px;border-radius:6px;border:0.5px solid #ddd;background:transparent;color:#888;font-size:12px;cursor:pointer">${cat.split(" ")[0]} (${count})</button>`;
+    }).join("");
+  facQFilter="All";
+  renderQuestionList();
+}
+
+function setQFilter(cat){
+  facQFilter=cat;
+  document.querySelectorAll('#cat-filters button').forEach(b=>{ b.style.fontWeight="400"; b.style.border="0.5px solid #ddd"; b.style.background="transparent"; b.style.color="#888"; });
+  const key=cat==="All"?"All":cat.replace(/\s/g,'_');
+  const btn=document.getElementById("filter-"+key);
+  if(btn){
+    const c=cat==="All"?{bg:"#E1F5EE",color:"#0F6E56"}:CAT_COLORS[cat];
+    btn.style.background=c.bg; btn.style.color=c.color; btn.style.border=`1.5px solid ${c.color}`; btn.style.fontWeight="500";
+  }
+  renderQuestionList();
+}
+
+function renderQuestionList(){
+  const ql=document.getElementById('question-list');
+  const filtered=facQFilter==="All"?ALL_QUESTIONS:ALL_QUESTIONS.filter(q=>q.cat===facQFilter);
+  ql.innerHTML=filtered.map((q,i)=>{
+    const globalIdx=ALL_QUESTIONS.indexOf(q)+1;
+    const cc=CAT_COLORS[q.cat]||{bg:"#E1F5EE",color:"#0F6E56"};
+    const answers=q.a.map((ans,ai)=>`
+      <div style="display:flex;align-items:flex-start;gap:8px;padding:6px 10px;border-radius:6px;margin-bottom:4px;background:${ai===q.correct?"#EAF3DE":"#f8f8f8"};border:0.5px solid ${ai===q.correct?"#639922":"#eee"}">
+        <span style="font-size:11px;font-weight:500;color:${ai===q.correct?"#3B6D11":"#bbb"};flex-shrink:0;margin-top:2px">${ai===q.correct?"✓":String.fromCharCode(65+ai)}</span>
+        <span style="font-size:13px;color:${ai===q.correct?"#27500A":"#666"};line-height:1.5">${ans}</span>
+      </div>`).join("");
+    return `<div class="card" style="margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:8px">
+        <span class="tag" style="background:${cc.bg};color:${cc.color}">${q.cat}</span>
+        <span style="font-size:11px;color:#bbb;flex-shrink:0">Q${globalIdx}</span>
+      </div>
+      <p style="font-size:14px;font-weight:500;color:#222;line-height:1.6;margin-bottom:10px">${q.q}</p>
+      ${answers}
+      <div style="margin-top:8px;padding:8px 10px;background:#f5f5f5;border-radius:6px;font-size:12px;color:#777;line-height:1.5">
+        <strong style="font-weight:500;color:#555">Learning tip: </strong>${q.tip}
+      </div>
+    </div>`;
+  }).join("");
+}
+</script>
+</body>
+</html>
