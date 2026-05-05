@@ -65,12 +65,12 @@
   </div>
   <div class="card">
     <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:14px">
-    As we celebrate <strong>Nurses Week 2026</strong>, the Orlando VA is advancing on its <strong>Journey to Pathway to Excellence 2027</strong>. Answer 3 randomly selected questions to see how we align with the essential elements of a positive work environment as defined by the 2024 Pathway to Excellence criteria — for a chance to win a giveaway!
+    As we celebrate <strong>Nurses Week 2026</strong>, the Orlando VA is on its <strong>Journey to Pathway to Excellence 2027</strong>. Answer 3 randomly selected questions to see how we align with the essential elements of a positive work environment as defined by the Pathway to Excellence criteria — for a chance to win a giveaway!
     </p>
     <div class="stat-grid">
       <div class="stat-box"><div class="stat-num">50+</div><div class="stat-lbl">Question pool</div></div>
       <div class="stat-box"><div class="stat-num">3</div><div class="stat-lbl">Your questions</div></div>
-      <div class="stat-box"><div class="stat-num">Raffle</div><div class="stat-lbl">Entry prize</div></div>
+      <div class="stat-box"><div class="stat-num">🎁</div><div class="stat-lbl">Giveaway entry</div></div>
     </div>
     <button class="btn-primary" onclick="startGame()">Start my quiz →</button>
   </div>
@@ -93,23 +93,20 @@
   <button class="btn-primary" id="next-btn" style="display:none" onclick="nextQuestion()">Next →</button>
 </div>
 
-<!-- RAFFLE FORM -->
+<!-- GIVEAWAY ENTRY -->
 <div id="raffle" class="screen">
   <div class="center" style="padding:1.25rem 0 1rem">
-    <div class="big-icon">🎟</div>
-    <h2>You've earned a raffle entry!</h2>
+    <div class="big-icon">🎁</div>
+    <h2>You've completed the quiz!</h2>
     <p class="subtitle" id="raffle-score-msg"></p>
     <div class="dots-row" id="raffle-dots" style="justify-content:center"></div>
   </div>
   <div class="card">
-    <p style="font-size:14px;color:#555;line-height:1.6;margin-bottom:14px">Enter your details, then submit the Microsoft Form to be officially entered into the raffle!</p>
-    <label>Full name</label>
-    <input type="text" id="r-name" placeholder="e.g. Jamie Reyes" />
-    <label>VA email address</label>
-    <input type="email" id="r-email" placeholder="e.g. jamie.reyes@va.gov" />
-    <div id="form-err" class="error-msg" style="display:none"></div>
-    <button class="btn-primary" onclick="submitRaffle()">Generate my raffle code →</button>
-    <button class="btn-ghost" onclick="startGame()">Retake with new questions</button>
+    <p style="font-size:14px;color:#0F6E56;line-height:1.7;margin-bottom:16px;background:#E1F5EE;padding:12px;border-radius:8px;border:0.5px solid #1D9E75">
+      Happy Nurses Week from Orlando VA — thank you for all you do for our Veterans! Tap below to enter the giveaway. 🍀
+    </p>
+    <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Ixtf6a-r7kWCHberJRqzv0guq-pkkelNl65rUbA0UgVUNEUyWDVZVDhCMlROVUNGRVdDQTFCVUpUVi4u" class="ms-form-btn" target="_blank">Enter the giveaway →</a>
+    <button class="btn-ghost" onclick="startGame()">Let a colleague take their quiz</button>
   </div>
 </div>
 
@@ -346,7 +343,7 @@ function nextQuestion(){
 }
 
 function showRaffle(){
-  document.getElementById('raffle-score-msg').textContent=`You scored ${currentScore} out of ${shuffledQs.length} — thank you for celebrating PTE with us!`;
+  document.getElementById('raffle-score-msg').textContent=`You scored ${currentScore} out of ${shuffledQs.length} — great work!`;
   const rd=document.getElementById('raffle-dots');
   rd.innerHTML=results.map(r=>dotHTML(r?"correct":"wrong",r?"✓":"✗")).join("");
   showScreen('raffle');
