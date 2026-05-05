@@ -65,7 +65,7 @@
   </div>
   <div class="card">
     <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:14px">
-      As we celebrate <strong>Nurses Week 2026</strong>, Orlando VA is on a <strong>Journey to Pathway to Excellence 2027</strong>! Answer 3 randomly selected questions to discover how our programs already align with the 28 PTE survey domains — then enter the raffle!
+    As we celebrate <strong>Nurses Week 2026</strong>, the Orlando VA is advancing on its <strong>Journey to Pathway to Excellence 2027</strong>. Answer 3 randomly selected questions to see how we align with the essential elements of a positive work environment as defined by the 2024 Pathway to Excellence criteria — for a chance to win a giveaway!
     </p>
     <div class="stat-grid">
       <div class="stat-box"><div class="stat-num">50+</div><div class="stat-lbl">Question pool</div></div>
@@ -117,27 +117,25 @@
 <div id="confirm" class="screen">
   <div class="center" style="padding:1.25rem 0 0.75rem">
     <div class="big-icon">🎉</div>
-    <h2>Almost there!</h2>
-    <p class="subtitle">Copy your raffle code below, then tap the button to submit the form.</p>
+    <h2>You're almost entered!</h2>
+    <p class="subtitle">Tap the button below to open the Microsoft Form and complete your giveaway entry.</p>
   </div>
   <div class="confirm-card">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:12px;border-bottom:0.5px solid #eee">
       <div>
-        <p style="font-size:12px;color:#aaa;margin-bottom:2px">Your raffle code</p>
-        <p class="code-display" id="conf-code"></p>
+        <p style="font-size:13px;color:#888;margin-bottom:2px">Name</p>
+        <p style="font-size:15px;font-weight:500;color:#222" id="conf-name"></p>
       </div>
       <div style="background:#E1F5EE;border-radius:8px;padding:8px 12px;text-align:center">
         <div style="font-size:20px;font-weight:500;color:#0F6E56" id="conf-score"></div>
         <div style="font-size:11px;color:#5DCAA5">score</div>
       </div>
     </div>
-    <div style="margin-bottom:10px"><p style="font-size:13px;color:#888;margin-bottom:2px">Name</p><p style="font-size:15px;font-weight:500;color:#222" id="conf-name"></p></div>
     <div style="margin-bottom:14px"><p style="font-size:13px;color:#888;margin-bottom:2px">Email</p><p style="font-size:15px;color:#222" id="conf-email"></p></div>
-    <div style="background:#E1F5EE;border-radius:8px;padding:10px 12px;font-size:13px;color:#0F6E56;line-height:1.5;margin-bottom:14px">
-      📋 <strong>Step 1:</strong> Copy your raffle code above.<br>
-      📝 <strong>Step 2:</strong> Tap the button below to open the Microsoft Form and paste your code to complete your entry!
+    <div style="background:#E1F5EE;border-radius:8px;padding:10px 12px;font-size:13px;color:#0F6E56;line-height:1.6;margin-bottom:14px">
+      Happy Nurses Week from Orlando VA — thank you for all you do for our Veterans! Tap below to complete your giveaway entry. 🍀
     </div>
-    <a id="ms-form-link" class="ms-form-btn" target="_blank">Open Microsoft Form to complete entry →</a>
+    <a id="ms-form-link" class="ms-form-btn" target="_blank">Complete my giveaway entry →</a>
     <button class="btn-ghost" onclick="startGame()">Let a colleague take their quiz</button>
   </div>
 </div>
@@ -361,10 +359,8 @@ function submitRaffle(){
   if(!name){errEl.textContent="Please enter your name.";errEl.style.display="block";return;}
   if(!email||!/\S+@\S+\.\S+/.test(email)){errEl.textContent="Please enter a valid email.";errEl.style.display="block";return;}
   errEl.style.display="none";
-  raffleCode=genCode(name);
   raffleName=name; raffleEmail=email;
   raffleScore=`${currentScore}/${shuffledQs.length}`;
-  document.getElementById('conf-code').textContent=raffleCode;
   document.getElementById('conf-name').textContent=raffleName;
   document.getElementById('conf-email').textContent=raffleEmail;
   document.getElementById('conf-score').textContent=raffleScore;
