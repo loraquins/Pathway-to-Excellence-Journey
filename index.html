@@ -317,10 +317,13 @@ function nextQuestion() {
 }
 
 function showDone() {
-  document.getElementById('done-score').textContent = "You scored " + currentScore + " out of " + shuffledQs.length + " — great work!";
+  var passed = currentScore >= 2;
+  document.getElementById('done-score').textContent = "You scored " + currentScore + " out of " + shuffledQs.length + (passed ? " — great work!" : " — you need at least 2 correct to enter the giveaway.");
   var dd = document.getElementById('done-dots');
   dd.innerHTML = "";
   results.forEach(function(r) { dd.innerHTML += dotHTML(r ? "correct" : "wrong", r ? "✓" : "✗"); });
+  document.getElementById('done-pass').style.display = passed ? "block" : "none";
+  document.getElementById('done-fail').style.display = passed ? "none" : "block";
   showScreen('done');
 }
 
